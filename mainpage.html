@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mainpage.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		body{
+			margin:0;
+			position: relative;
+
+		}
+		.scren{
+			background-image: url("images/bluesky.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 100vh;
+			overflow:hidden; 
+			/*overflow: scroll*/; 
+			color:white;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 300;
+			/*position: relative;*/
+			/*z-index:10;*/
+		}
+		.scren header{
+			max-width: 50%;
+			position: relative;
+			left: 50%;
+			top:50%;
+			transform:translateX(-50%)
+			translateY(-50%);
+			font-size: 3rem;
+			text-align: center;
+			position: center;
+		}
+		.scren h1{
+			margin: 0;
+			text-align: center;
+			font-size: 4rem;
+			margin-bottom: 1rem;
+			font-weight: 400;
+
+		}
+		.scren header h1:after{
+			content:"";
+			border-bottom:1px solid white;
+			width: 12rem;
+			display:block;
+			margin: 0 auto;
+			margin-top: 1rem;
+		}
+		#ani1{
+			margin-top: 50px;
+			
+			
+		}
+		
+		#ani2{
+			background: ;
+			border: 0px solid none;
+		}
+		.social{
+			width: 30px;
+			height: 36px;
+		}
+		.one{
+			background-image: url("images/우주.jpg");
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			overflow:hidden; 
+			/*overflow: scroll*/; 
+			/*position:absolute;*/
+		/*	top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index:9;*/
+		}
+		.two{
+			background-image: url("images/bac.jpg");
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			overflow:hidden;
+			/*overflow: scroll*/; 
+			/*position:absolute;*/
+			/*top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index:8;*/
+		}
+		.stella{
+			color:#000;
+			text-shadow: none;
+			text-align: center;
+			padding: 10rem 17rem;
+				
+		}
+		section{
+		background-attachment: fixed;
+		}
+		.right{
+			width: 50px;
+			height: 100%;
+			position: fixed;
+			left: 97%;
+			/*background-color: #cecece;*/
+			display: table;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.bookmark{
+			vertical-align: middle;
+			display: table-cell;
+
+		}
+		li{
+			list-style: none;
+		}
+		.bookmark>li>a{
+			text-decoration: none;
+			font-size: 20px;
+			margin-bottom: 25px;
+		}
+	</style>
+</head>
+<body >
+<div class=" right  ">
+	<div class="bookmark" id="book">
+		<li class="active" ><a class="glyphicon glyphicon-globe" href="#one"></a></li>
+		<li ><a class=" glyphicon glyphicon-globe" href="#two"></a></li>
+		<li ><a class=" glyphicon glyphicon-globe" href="#three"></a></li>
+	</div>
+	
+</div>
+<section id="one"  class="scren"  >
+	<header>
+		<h1>Trillion</h1>
+		Welcome!<br>
+		<span class="glyphicon glyphicon-download animated bounce"  id="ani1"></span>
+		<br><br><span class="btn btn-default" id="ani2"><a class="glyphicon glyphicon-home" style="text-decoration: none" href="10.22-byebye.html"></a></span>
+	</header>
+</section>
+<section class="stella" data-stellar-background-ratio=0.1>
+<h2>This is reular container</h2>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi reiciendis aspernatur ducimus recusandae atque repudiandae illum dolorum ad quasi maiores cumque quod, impedit veritatis, delectus, corrupti corporis iure officia? Omnis.
+</section>
+<section id="two" class="scren one" >
+	<header>
+		<h1 >Trillion</h1>
+		Welcome!<br>
+		<span class="glyphicon glyphicon-download animated bounce"  id="ani1"></span>
+		<br><br><span class="btn btn-default" id="ani2"><a class="glyphicon glyphicon-home" style="text-decoration: none"  href="10.22-byebye.html"></a></span>
+	</header>
+</section>
+<section class="stella" data-stellar-background-ratio=0.1>
+<h2>This is reular container</h2>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi reiciendis aspernatur ducimus recusandae atque repudiandae illum dolorum ad quasi maiores cumque quod, impedit veritatis, delectus, corrupti corporis iure officia? Omnis.
+</section>
+<section id="three" class="scren two" >
+	<header>
+		<h1 >Trillion</h1>
+		Welcome!<br>
+		<span class="glyphicon glyphicon-download animated bounce"  id="ani1"></span>
+		<br><br><span class="btn btn-default" id="ani2"><a class="glyphicon glyphicon-home" style="text-decoration: none"  href="10.22-byebye.html"></a></span>
+	</header>
+</section>
+<section class="stella" data-stellar-background-ratio=0.9>
+<h2>This is reular container</h2>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi reiciendis aspernatur ducimus recusandae atque repudiandae illum dolorum ad quasi maiores cumque quod, impedit veritatis, delectus, corrupti corporis iure officia? Omnis.
+</section>
+	
+
+
+<!-- <script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> -->
+
+<script src="js/jquery-2.0.2.js"></script>	
+<script src="js/jquery.stellar.min.js"></script>
+<!-- <script src="js/jquery-3.1.1.js"></script> -->
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.smooth-scroll.js"></script>
+
+
+<script>
+	$("#book a").smoothScroll();
+
+	$.stellar();
+	// $('#top').stellar({verticalScrolling:ture});
+
+
+ 	
+
+</script>
+
+</body>
+</html>

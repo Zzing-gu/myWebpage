@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MyAngryBird.html</title>
+	<style>
+		#myCanvas{
+			border: 1px solid #0ff;
+		}
+		body{
+			
+		}
+		#myscore{
+			color: red;
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+<canvas id="myCanvas" height="700" width="1500">
+	<div>score</div>
+</canvas>
+<p id="myscore"> </p>
+<p><a href="10.22-byebye.html">메인으로</a></p>
+<script>
+// var backbg = new Image();
+
+var canvas = document.querySelector("#myCanvas");
+var context = canvas.getContext("2d");
+	
+var bgimg = new Image();
+bgimg.src = "images/backbg.png";
+var player = new Image();
+player.src = "images/yellowbird.png";
+var player2 = new Image();
+player2.src = "images/redbird.png";
+var juck1 = new Image();
+juck1.src = "images/bottle.png";
+
+var birdX = 0 ;
+var birdY = 650;
+
+var juckY = 350;
+
+var score = 0;
+
+var gravityAccel =0;
+var gravityAccel2 =0;
+var gravityAccel3 = 0;
+
+var isPushed = false;
+
+var isMovedown = false;
+
+// var sound = new Audio("sounds/xxx.mp3");
+// sound.currentTime=0;
+// sound.play();
+
+document.querySelector("#myscore").innerText ="SCORE:" + score;
+
+
+setInterval(drawScreen,20);
+
+function drawScreen(){
+	
+
+	
+
+	// context.drawImage(juck1,700,350,100,100);
+	context.drawImage(bgimg, 0,0,1500,700);
+	context.drawImage(player,birdX,birdY,50,50);
+	context.drawImage(player2,700,juckY,100,100);
+	// context.drawImage(player2,birdX-50,birdY-200,50,50);
+	moveJuck();
+	movePlayer();
+	gravity();
+	checkEnemy();
+	
+	
+
+};
+
+function checkEnemy(){
+	if((birdY>juckY-30)&&(birdY<juckY+200)&&birdX==750){
+		alert("당신의 점수는"+ score + "입니다!");
+		score = 0;
+		document.querySelector("#myscore").innerText ="SCORE:"+ score;
+		birdX = 0;
+		birdY = 650;
+		location.reload();
+	}
+}
+
+function movePlayer(){
+	if(isPushed && birdX<1465){
+		birdX+=10;
+		birdY-=15;
+		
+	}
+
+}
+
+function gravity(){
+
+	if(birdY<645 && birdX <1465){
+		
+	// 난이도 모드
+	// birdY += (3 +count/100);
+
+	birdY += (1+gravityAccel);
+	// birdX += (0.1+gravityAccel);
+} else{
+	isPushed=false;
+	resetPlayer();
+	// birdY -= 1 ;
+}}
+
+function resetPlayer(){
+
+	if (birdX>1400||birdY<100) {
+		birdX = 0;
+	}
+}
+
+function moveJuck(){
+	if (!isMovedown) {
+	juckY-=(5+gravityAccel3);
+	if (juckY<-50){
+		isMovedown =true;
+	} 
+}
+		// juckY-=10+gravityAccel2;
+	// }
+	//위아래로 움직이게 하기 
+	
+	if(isMovedown){
+		juckY+=5+gravityAccel2;
+		if(juckY>650){
+			isMovedown=false;
+		}
+	}
+
+
+}
+
+setInterval(gravityAccelation,10);
+
+function gravityAccelation(){
+	
+		gravityAccel+=0.01*9.8;
+		gravityAccel2+=0.01;
+		gravityAccel3+=0.01;
+
+		
+	
+}
+
+document.querySelectorAll("body")[0].addEventListener("keydown", function(){
+
+	// birdY -= 450 ;
+	// birdX += 850;
+	isPushed = true;
+	gravityAccel=0;
+	// for (var i = 0; i < 100; i++) {
+	// 	gravityAccel+=10;
+	// }
+	score++;
+	document.querySelector("#myscore").innerText ="SCORE:"+ score;
+}  )
+	
+
+</script>
+	
+</body>
+</html>

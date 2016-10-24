@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10.19/1.14.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	 <!-- search 이벤트 -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type='text/javascript' src='js/jquery.bgiframe.min.js'></script>
+	<script type='text/javascript' src='js/jquery.ajaxQueue.js'></script>
+	<script type='text/javascript' src='js/jquery.autocomplete.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
+	
+	<!-- search 이벤트 -->   
+	<style>
+
+		body{
+			background-color: #f1f1f2;
+		}
+		.topcontainer{
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+		}
+		
+		.bodyContainer{
+			padding-top: 200px;
+			
+			position: relative;
+
+		}
+		
+		
+		.top{
+			width: 100%;
+			height: 100px;
+			color: white;
+			text-align: center;
+			font-size: 50px;
+			display: table;
+			background-image: url(images/하늘.jpg);
+			background-image: cover;
+			
+			scroll-behavior: auto;
+			
+		}
+		.top span{
+			vertical-align: middle;
+			display: table-cell;
+		}
+		.bottom{
+			/*height: 4000px;*/
+		}
+
+		.beSmall{
+			height: 50px;
+			/*height: 90px;*/
+		}
+		.beLarge{
+			height: 100px;
+			/*height: 210px;*/
+		}
+		.transition-effect{
+			-webkit-transition: all 0.4s linear;
+		}
+		.botTag{
+			width: 100%;
+			height: 50px;
+			background-color: #cecece;
+			position: fixed;
+			/*top: 885px;*/
+			top: 96%;
+		}
+		.beGone{
+			-webkit-transform: translateY(100px);
+			
+		}
+		.beBack{
+			
+		}
+
+		.side{
+			/*padding-left: 50px;*/
+			/*padding-top: 10px;*/
+			padding-right: 0;
+		}
+
+		.main{
+
+		}
+		
+		
+		
+		/* 왼쪽 박스 fixed */
+		.lT{
+			/*position: fixed;*/
+			/*top: 170px;*/
+			/*left: 30px;*/
+			/*width: 284px;*/
+			height: 239px;
+			width: 218.5px;
+			text-align: center;	
+			background-image: url(images/하늘.jpg);
+			/*position: absolute;*/
+			
+			/*border:1px solid #e6e7e8 ;*/
+
+			/*border: 1px solid;*/
+			/*background-color: white;*/
+
+		}
+		.lTBox{
+			padding: 0;
+		}
+		.lTcontainer{
+			width: 218.5px;
+		}
+
+		.lT> div{
+			text-align: center;
+		}
+
+		.lTTop{
+			/*height: 100px;*/
+			display: table;
+		}
+		.lTTop>div{
+			vertical-align: middle;
+		}
+
+		.lB{
+			/*position: fixed;*/
+			/*margin-top: 100px;*/
+			/*position: absolute;*/
+			/*top: -150px;*/
+			/*left: 35px;*/
+			/*width: 285px;*/
+			height: 474px;
+			width: 218.5px;
+			background-color: white;
+			background-image: url(images/하늘.jpg);
+		}
+
+		.lBBox{
+			padding: 0;
+		}
+
+
+		 #runBtn{
+ 				
+         	 border: 0px solid #fff;
+         	 background-color: #f1f1f2;
+         	 color: #000;
+         	 
+         }
+         .rotate180{
+			-webkit-transform: rotate(180deg);
+		}
+		li{
+			 list-style-type: none;
+
+		}
+		.lbcontainer{
+			/*width: 300px;*/
+      	    /*height: 500px;*/
+      	    /*margin-left: -20px;*/
+      	    /*background-color: white;*/
+      	    /*margin-top: 10px;*/
+      	    border:1px solid #e6e7e8;
+      	    }
+        ul{
+      	    font-size: 15px;
+            margin-left: -10px;
+      	    }
+      	    /*깡*/
+		 /*----------------강민(css)----------------*/
+		.box{
+			
+			height: 257.5px;
+			overflow: hidden;
+			border: 3px solid #f1f1f2;
+			padding: 0px; 
+			margin-top: 5px;
+			
+		}
+
+
+		    .sideBar{
+            	 width: 51px;
+            	 height: 1000px;
+
+            	 background-color: gainsboro;
+            	 position: fixed;
+            	
+            	 
+            	 margin-top: -20px;
+            	 display: none;
+            } 
+               @media(min-width: 768px) and (max-width: 1200px){
+                   
+                   .sideBar{
+                    display: block;
+                  
+
+                   }     
+                   .bodyContainer{
+				padding-top: 156px;
+				
+				position: relative;
+				}
+     	    }
+
+     	  /*  .side{
+     	    	border: 1px solid red;
+     	    	padding-left: 100px;
+     	    }
+           */
+           /*----------------강민(css)----------------*/
+		.side1{
+                
+              height: 150px;
+                border-bottom: 1px solid #BBBBBB;    
+            }
+             #topbtn{
+                  height: 50px;
+                  color: #fff;
+                  background-color: #747373; 
+                  border-radius: 10px;
+            }
+
+            img:hover{
+
+            }    
+                  
+                
+            
+            .sideSon{
+               margin-top:10px;
+               text-align: center;
+            }
+             #col8{
+                   
+
+                 
+              }
+
+        
+            #col4{
+                   height: 2000px;
+                 background-color:#747373;
+                 
+                
+              }
+              .inarea{
+              	
+              	position: fixed;
+              }
+
+             
+             
+              #inarea1{
+                       width: 181px;
+                       height: 220px;
+                       padding-top: 10px;
+
+                       border-bottom: 1px solid #BBBBBB;
+              }
+              #inarea2{
+                      width:181px;
+                      height: 150px; 
+                      border-bottom: 1px solid #BBBBBB;  
+              
+             
+
+              }
+              #inareaSm{
+
+              }
+
+            
+             /* #inarea3{
+                   
+                        height: 50%;
+                       border-bottom: 1px solid #BBBBBB;
+              }  */
+             
+                                 
+                            
+                        #heartS{ 
+                        width: 20%;
+                        height: 40px;
+                          
+                          
+                        background-color: #747373;
+                        color: #fff;
+                        text-align: center;
+                        padding-top:10px;
+                           
+                        }
+                        #envelopeS{
+                             width: 20%;
+                             height: 40px;
+                             color: #fff;
+                             text-align: center;
+                             padding-top:10px;
+                              background-color: #33BB6C;
+                             
+                        }
+                        #facebooxS{
+                              width: 10%;
+                             height: 40px;
+                             color: #fff;
+                             text-align: center;
+                             padding-top:10px;
+                              background-color:#2B5B8E;
+                        }
+                        
+                        #twitterS{
+                             width: 10%;
+                             height: 40px;
+                             color: #fff;
+                             text-align: center;
+                             padding-top:10px;
+                              background-color:#89BCF3;
+                        }
+                        span{
+                           width: 100%;
+                        /*왼쪽 이모니콘 가로 본능*/
+                        }
+
+
+                        a{
+                          font-size: 22px;
+
+
+                          
+                          
+
+                        }
+                        /*.content{
+                             margin:0 auto;
+                             width: 57%;
+                             height: 100px;*/
+                             
+                        
+                        .content2{
+                            
+                             width: 10%;
+                             /*height: 100px;*/
+                             
+                        }
+                        #eyeY{
+                              color: #B1B1B1;
+                              padding-top: 15px;
+                        }
+                        #heartY{
+                               color: #B1B1B1;
+                        } 
+                        #commentY{
+                              color: #B1B1B1;
+                        }
+                        #windowY{
+                              color: #B1B1B1;
+                        } 
+
+             
+                      /*.modal1{*/
+                      /*width: 60%;*/
+                      /*height: 100%;*/
+                      /*margin: 0 auto;*/
+                      /*padding: 0;*/
+                        /*}*/
+                      .modal-content{
+                      /*width: 100%;*/
+                      /*height: auto;*/
+                      min-height: 100%;
+                      border-radius: 0;
+                     /*흰박스 높이 조절
+                     */
+                     height: 2000px;
+                     /* margin: 0 auto;*/
+                      padding: 0;
+                    }
+                    
+
+
+                    @media(min-width: 992px){
+                       #contentBox{ width: 60%;
+                        margin: 0 auto;  
+                        margin-top: 30px;    
+                        
+                     }
+                   }
+                     /*이미지 마우스 이벤트*/
+                    .side3{
+                         margin: inherit;
+                         
+                       /*  height: 50%*/
+                       
+                       
+                    }
+                    #imgId1{
+                         z-index: 5;
+                         max-width: 100%;
+                    }
+                       #imgId2{
+                         z-index: 5;
+                         max-width: 100%;
+                    }
+                
+                
+                   
+                
+
+                     .imgMoon2{
+                      
+                       margin-top: -830px;
+                       /*display: none;*/ 
+                       /*display: inline;*/
+                        z-index: 10;
+                      
+                    }
+                    .inareaBtn{
+
+			         	 border:1px solid #00BFFF;
+			         	 background-color: #747373;
+			         	 color: #00BFFF;
+			         	 padding: 10px;
+			             border-radius: 50px;
+			             margin-left: 52px;
+			         }
+			         .peco{font-size: 25px; 
+			         	   color:#00BFFF;
+			                margin-left: 50px;}
+			         .picimg{
+			         	  margin-left: 65px;
+			         	  border-radius: 50px;
+			         }
+			         .close{
+			         	z-index: 99;
+			         }  
+                    	.form-group{background-color: gainsboro;
+     }
+
+
+         
+           
+        /*----------------강민(css)----------------*/
+		
+		
+
+	
+
+	
+		.img{
+			height: 190px;
+			background-color: #cecece;
+			overflow: hidden;
+
+		}
+
+		.text{
+			height: 85.5px;
+			background-color:#F8FFFF;
+			padding:10px;
+
+		}
+		.fotorama{
+			width: 100%;
+		}
+			.inul>li{
+				list-style-type: none;
+			}
+			#best{
+				font-weight: bold;
+				padding: 0;
+			}
+			.inbox2{
+				border-bottom: 1px solid blue;
+				margin: 10px 15px;
+			}
+			a{
+				color: black;
+			}
+			.inul{
+				padding-left: 10px;
+				line-height: 30px;
+				height: 230px;
+			}
+			.lil{
+				display: inline-block;
+	    		/*width: 20px;*/
+	    		font-size: 14px;
+	    		font-weight: 700;
+	    		text-align: center;
+	    		color: #00a6de;
+	    		letter-spacing: -1px;
+	    		vertical-align: bottom;
+			}
+			.lir{
+				display: inline-block;
+				/*border: 1px solid blue;*/
+	    		/*width: 220px;*/
+	    		font-size: 14px;
+	    		font-weight: 700;
+	   			overflow:hidden;
+	   			vertical-align: bottom;
+			}
+			.rTR{
+				overflow: hidden;
+			}
+
+			 
+
+
+
+			/*정호석 맨 아래 설명줄*/
+
+			 .bottomRow{
+				text-align: center;
+
+	      	 } 
+	      	 .bottomRow>span{
+	      	 	margin-right: 10px;
+	      	 }
+
+	      	 /* ㄴ여기까지 설명줄*/
+
+	      	 /* device 의 폭이 768px 이하일때 적용할 css */
+			@media (max-width: 992px){
+				.bodyContainer{
+				padding-top: 55px;
+				
+				position: relative;
+				}
+				
+
+			}
+
+			.sideBar{
+				font-size: 20px;
+				text-align: center;
+				/*text-decoration: none;*/
+			}
+
+			.sideBar>div>a{
+				padding-top: 20px;
+				text-decoration: none;
+			}
+		#nav{
+			height: 50px;
+			position: relative;
+			background-color: #003399;
+		}
+		#gly{
+			position: absolute;
+			padding: 8px 3px;
+			left: 5px;
+		}
+		#search{
+			position: absolute;
+			right: 10px;
+		}
+		.icon{
+			width: 22px;
+			height: 22px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			/*background-color: white;*/
+			
+
+		}
+		.ovr:hover{
+			color:blue;
+		}
+		.Tag{
+			border:1px solid #cecece;
+			background:#cecece;
+			color: #303030;
+		}
+		.navin{
+			color:white;
+		}
+		.navin:hover{
+			background-color:; 
+			color:#003399;
+		}
+
+		.lbcontainer  a{
+			color: white;
+			font-size: 15px;
+		}
+		.lbcontainer li {
+			color: white;
+		}
+		.modals{
+			cursor: pointer;
+		}
+	/*오른쪽 버튼*/
+		#XBtn{
+			top:300px;
+			right: 1px;
+			border-radius: 10px;
+			font-size: 25px;
+			position: fixed;
+			padding: 5px;
+			z-index: 2;
+		}
+		#sky{
+			top:340px;
+			right: 2px;
+			border-radius: 10px;
+			font-size: 25px;
+			position: fixed;
+			padding: 5px;
+			z-index: 2;
+			color: #2478FF;
+		}
+		#universe{
+			top : 380px;
+			right: 0px;
+			border-radius: 10px;
+			font-size: 25px;
+			position: fixed;
+			z-index: 2;
+			padding: 5px;
+			color: black;
+		}
+		#btnBox{
+			top:300px;
+			right: 2px;
+			width: 35px;
+			height: 120px;
+			position: fixed;
+			z-index: 1;
+			border-radius: 10px;
+		}
+		.contain{
+			width: 290px;
+			height: 359px; 
+			border-radius: 10px;
+			position: absolute;
+			top : 300px; 
+			right: -290px;
+			display: none; 
+			z-index: 4;
+			background-color: #fff;
+		}
+		#kBox1{
+			top:20px;
+			background-color: black;
+			width: 100%;
+			height: 65px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+
+		}
+		#kBox1 > p{
+			padding-top: 12px;
+			line-height: 1em;
+			color: white;
+		}
+		.contain p{
+			font-size: 18px;
+			color: #000;
+			text-align: center;
+		}
+		#reBtn{
+			font-size: 18px;
+			cursor: pointer;
+			color: white;
+			padding: 5px;
+		}
+		.kBox2{
+			position: relative;
+			height: 100px;
+		}
+		#textBtn{
+			position: absolute;
+			padding: 0 75px;
+			left: 7%;
+		}
+		#Gcomment{
+			text-align: center;
+		}
+		.conin{
+			height: 55px;
+			position: relative;
+		}
+		.conin > p{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+<div class="topcontainer ">
+	
+	<div class="top transition-effect hidden-sm hidden-xs"  data-stellar-background-ratio=0.6  data-stellar-vertical-offset="550" ><span>무슨 일이 일어나고 있나요?</span></div>
+	
+	<div id="nav" >
+
+	<div class="container">
+
+		<ul class="nav navbar-nav hidden-xs hidden-sm">
+	<!-- 	<span class="navin" style=" font-size: 20px; padding: 15px 25px;text-align: left">trillion</span> -->
+		    <li >
+			    <a href="#home" data-toggle="tab" class="navin" style=" font-size: 20px; padding: 15px 25px;">Home</a>
+			</li>
+			<li>
+			    <a href="#profile" data-toggle="tab" class="navin" style=" font-size: 20px; padding: 15px 25px;">Profile</a>
+			</li>
+			<li>
+			    <a href="#message" data-toggle="tab" class="navin"  style=" font-size: 20px; padding: 15px 25px;">Message</a>
+			</li>
+			<li>
+			    <a href="#message" data-toggle="tab" class="navin" style=" font-size: 20px; padding: 15px 25px;">Message</a>
+			</li>
+			<li>
+			    <a href="#message" data-toggle="tab" class="navin" style=" font-size: 20px; padding: 15px 25px;">Message</a>
+			</li>
+			
+		</ul>
+		<div class="hidden-md hidden-lg">
+			<div class="row">
+				<a id="gly" href="#" class="glyphicon glyphicon-menu-hamburger" style="font-size: 34px; color: #fff; text-decoration: none;"></a>
+			</div>
+		</div>
+		<form class="navbar-form navbar-right form-inline hidden-xs">
+			<div id="search" class="form-group">
+				<input type="text" class="form-control" placeholder="검색하기" id="searchbox" />
+				<span><button type="submit" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button></span>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+<script>
+
+		window.onload=function(){
+			console.log("-4-");
+			var width =$(this).width();
+    	if(width<1200){
+    	$(".wrapper").removeClass("container");
+    		}
+		};
+
+
+	var availableTags = [
+							'우리가 몰랐던 블랙리스트 영화들',
+							'유리구슬 하나로 만든 분위기 깡패',
+							'1년에 딱 두번뿐인 집사와 낭덕을',
+							'부산에서 유명한 무봤나 촌닭st',
+							'내가 바보같이 실수하게 되는 진짜',
+							'한번 보고 또 봐도 신기한 취향저격',
+							'이 천조국 캐릭터가 한국말을 하게',
+							'가늘고 늘씬한 다리를 위한 5분 집'
+						];
+			$("#searchbox").autocomplete(availableTags,{ 
+	       		matchContains: true,
+	        	selectFirst: false
+	    });						
+	</script>
+
+
+
+<div class="wrapper container">
+	
+		<div class="bodyContainer transition-effect">
+
+		<div class="sideBar">
+			<div class="text-muted"><a class="glyphicon glyphicon-search text-muted" href="Carousel.html"></a></div>	
+			<div class="text-muted"><a class="glyphicon glyphicon-eye-open text-muted" href="MyAngryBird.html"></a></div>	
+			<div class="text-muted"><a class="glyphicon glyphicon-heart text-muted" href="MusicGame.html"></a></div>	
+			
+			
+		</div>
+	
+		<!-- 왼쪽 이요 -->
+		<div class="side col-xs-3 hidden-md hidden-sm hidden-xs">
+			
+
+			<!-- 왼쪽 위 -->
+			<div class="lTBox col-lg-12">
+				<div class="lTcontainer">
+					<div class=" lT  img-responsive" data-stellar-background-ratio=0.6>
+						
+						<p class="login lTTop">
+						<div style="text-align: center; font-size: 1.5em;color:#2478FF">로그인 하세요.<br>더욱 즐거워집니다!</div></p>
+						<br>
+						<button class="lTMid btn btn-info btn-block" style="background-color:#2478FF;font-weight: bold; ">로그인하기</button>
+						<br>
+						<div class="btn btn-default" style="padding-left:70.5px;padding-right:70.5px;><a href="#">회원가입</a></div>
+					</div>	
+				</div>				
+			</div>
+
+
+
+			<!-- 왼쪽 아래 -->
+			<div class="lBBox col-lg-12   ">
+				<div class="lB " data-stellar-background-ratio=0.6>
+					<div class="lbcontainer">
+		    				<ul id="ul1"><a href="#">홈</a></ul>
+		    				<ul id="ul2"><a href="#">피키툰</a></ul>
+		    				<ul id="ul3"><a href="#">골라보기</a>
+		                    <button id="runBtn" >
+			                <i id="vimg" class="glyphicon glyphicon-chevron-down"></i>
+		                    </button>
+			                <div class="libox">
+							
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2016/06/22/110_147_1469175580.png"/>죽기전에 볼 이야기</a></li>
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2016/06/22/110_147_1469175580.png"/>역대급 이야기</a></li>
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2016/06/07/110_117_1467335116.png"/>어느새 결제완료</a></li>
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2016/06/22/110_132_1467715380.png"/>라이브 다시보기</a></li>
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2015/01/21/110_50_1467335076.png"/>먹킷리스트</a></li>
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2015/01/21/110_44_1467335070.png"/>꿀팁의 전당</a></li>
+							<li><a href="#" class="ovr"><img class="icon" src="https://cdnb.pikicast.com/110/2015/01/21/110_62_1467335064.png"/>썸에서 결혼까지</a></li>
+						<!-- 	<li><a href="#"><img src="https://cdnb.pikicast.com/110/2015/01/21/110_74_1467335058.png" alt=""/>남자들만 드루와</a></li> -->
+						<!-- 	<li><a href="#"><img src="https://cdnb.pikicast.com/110/2015/01/21/110_80_1467335047.png" alt=""/>여자들만 일루와</a></li> -->
+						</ul>
+						</div>
+				</div>
+			</div>
+
+
+		</div> 
+		<!-- 없애지마! -->
+		
+<!-- 오른쪽 버튼 -->
+	<div id="btnBox" class="bg-danger hidden-xs hidden-sm">
+		<a id="XBtn" class="btn glyphicon glyphicon-tasks"></a>
+		<a id="sky" class="btn text-muted glyphicon glyphicon-plane" href="#Sky"></a>
+		<a id="universe" class="btn text-muted glyphicon glyphicon-star" href="#Universe"></a>
+	</div>
+	<div class="contain hidden-sm hidden-xs">
+		<i id="reBtn" class="glyphicon glyphicon-remove pull-right"></i>
+		<div id="kBox1">
+			<p>운영 시간: 09:00–18:00 <br> 월요일-금요일</p>
+		</div>
+		<div id="kBox2">
+			<div class="conin">
+			<p id="#Gcomment" class="col-md-offset-1 col-lg-offset-1 glyphicon glyphicon-comment"></p><p class="col-md-offset-3 col-lg-offset-3"> 텍스트 채팅</p>
+			</div>
+			<div class="conin">
+			<button id="textBtn" class="btn btn-primary">텍스트 채팅 시작</button>
+			</div>
+		</div>
+		<div id="kBox3">
+			<div class="conin">
+			<p id="#Gtime" class="col-md-offset-1 col-lg-offset-1 glyphicon glyphicon-time"></p><p class="col-md-offset-3 col-lg-offset-3">운영시간: 09:00–18:00 <br> 월요일-금요일</p>
+			</div>
+			<div class="conin">
+			<p id="#Gphone" class="col-md-offset-1 col-lg-offset-1 glyphicon glyphicon-phone"></p><p class="col-md-offset-3 col-lg-offset-3"> 010-1234-5678</p>
+			</div>
+			<div class="conin">
+			<p class="col-md-offset-1 col-lg-offset-1 glyphicon glyphicon-phone-alt"></p><p class="col-md-offset-3 col-lg-offset-3"> 02-700-5678</p>
+			</div>
+		</div>
+	</div>
+		
+
+		<div class="hidden-lg  hidden-xs col-md-1 col-sm-1"></div>
+
+		<!-- 오른쪽이요 -->
+		<div class="main col-lg-9 col-md-10 col-sm-10 col-xs-12">
+			
+			
+			<!-- 오른쪽 위 -->
+		
+
+			<div class="col-lg-12 col-xs-12 ">
+				<div class="main rT">
+					<div class="rTR col-sm-8 ">
+						<div class="fotorama" data-autoplay="true" data-loop="true"  data-arrows="true" data-click="false" data-swipe="true" data-stop-autoplay-on-touch="false">
+						<img class="img-responsive" src="images/제목1.jpg" alt="">
+						<img class="img-responsive" src="images/제목3.jpg" alt="">
+						<img class="img-responsive" src="images/제목2.jpg" alt="">
+						<img class="img-responsive" src="images/제목4.jpg" alt="">
+						<img class="img-responsive" src="images/제목5.jpg" alt="">
+					</div>
+				</div>
+					<div class="rTL col-sm-4 col-lg-4 col-lg-8 hidden-xs">
+						<div class="fotorama" data-autoplay="true" data-loop="true"  data-arrows="true" data-click="false" data-swipe="true" data-stop-autoplay-on-touch="false">
+						<img class="img-responsive" src="images/blood0.png" alt="">
+						<img class="img-responsive" src="images/blood1.png" alt="">
+						<img class="img-responsive" src="images/blood2.png" alt="">
+						<img class="img-responsive" src="images/blood3.png" alt="">
+						<img class="img-responsive" src="images/blood4.png" alt="">
+						</div>
+					</div>
+				</div>		
+			</div>
+	
+	
+		
+	
+		
+
+			<!-- 오른쪽 아래 그리드 -->
+				<div class="rB col-lg-12 col-xs-12">
+				
+				
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="images/idorll.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://pbs.twimg.com/media/CuxQ7uCVUAAYcWC.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://pbs.twimg.com/media/CmE_v14WYAAMz0A.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://ncache.ilbe.com/files/attach/new/20160424/4255758/7838266972/7937588863/6572aff8bbc57338903577f5cd29b9e4.jpeg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+				
+			
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://img.newspim.com/news/2016/05/04/1605041321004270.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://static.entertainmentwise.com/photos/Image/rdj.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://r.fod4.com/c=sq/s=w1000,pd1/o=80/http://p.fod4.com/p/channels/fzoud/profile/JFRGCIGYSZiC8vugtlHt_obama.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://ae01.alicdn.com/kf/HTB1.GwHMpXXXXXWaXXXq6xXFXXXU/Free-Shipping-54pcs-set-President-of-the-Russian-Vladimir-Putin-Poker-Celebrity-Playing-Cards-Human-theme.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://ncache.ilbe.com/files/attach/new/20150305/377678/4265959295/5420705799/47b061a6414a18514e29894e4cfd9893.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://www.hanasia.com/_sys/_upload/image/201610/18/14767790444566.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://www.dogdrip.net/files/attach/dvs/15/10/06/56670291/768/715/082/95b7147560126f0ff73388c56b09b3fd.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://www.tdrip.com/files/attach/images/104710/151/155/013/301ee0a3a5fc2cb932217e76ea3f90f7.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+				
+			
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="images/idorll.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://pbs.twimg.com/media/CuxQ7uCVUAAYcWC.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://pbs.twimg.com/media/CmE_v14WYAAMz0A.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://ncache.ilbe.com/files/attach/new/20160424/4255758/7838266972/7937588863/6572aff8bbc57338903577f5cd29b9e4.jpeg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+				
+			
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://img.newspim.com/news/2016/05/04/1605041321004270.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://static.entertainmentwise.com/photos/Image/rdj.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://r.fod4.com/c=sq/s=w1000,pd1/o=80/http://p.fod4.com/p/channels/fzoud/profile/JFRGCIGYSZiC8vugtlHt_obama.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://ae01.alicdn.com/kf/HTB1.GwHMpXXXXXWaXXXq6xXFXXXU/Free-Shipping-54pcs-set-President-of-the-Russian-Vladimir-Putin-Poker-Celebrity-Playing-Cards-Human-theme.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="https://ncache.ilbe.com/files/attach/new/20150305/377678/4265959295/5420705799/47b061a6414a18514e29894e4cfd9893.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://www.hanasia.com/_sys/_upload/image/201610/18/14767790444566.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://www.dogdrip.net/files/attach/dvs/15/10/06/56670291/768/715/082/95b7147560126f0ff73388c56b09b3fd.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+					<div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						<div class="img"><img data-toggle="modal" data-target="#myModal" class="modals img-responsive"   src="http://www.tdrip.com/files/attach/images/104710/151/155/013/301ee0a3a5fc2cb932217e76ea3f90f7.jpg"/ ></div>
+						<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					</div>
+				
+				</div>
+
+
+			</div>
+
+		
+
+
+		<!-- <div class="col-lg-1 hidden-md"></div> -->
+
+		</div>
+		<!-- 이것도 -->
+
+
+		</div>
+
+		
+
+
+
+
+
+
+
+		<div class="botTag transition-effect hidden-xs" style="text-align:center;">
+			<div class="bottomRow" >
+			<span class=""><a class="Tag text-muted btn btn-default" href="">회사소개</a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">고객지원 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">블로그 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">시스템 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">현황 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">인재채용 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">이용약관 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">개인정보취급방침 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">쿠키 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">광고 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">정보 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">브랜드 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">애플리케이션 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">광고 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">비즈니스 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">미디어 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">개발자 </a></span>
+			<span class=""><a class="Tag text-muted btn btn-default" href="">디렉토리</a></span>
+			</div>
+
+
+		</div>
+
+
+		<div class="bottom">
+			
+		</div>
+</div>
+
+
+<!-- 강민 -->
+<div id="myModal" class="modal fade">
+      <div class="modal1">
+        <div class="modal-content" id="contentBox">
+          <div class="col-xs-12 col-sm-8 col-md-8" id="col8">
+                  
+                <div class="side1">
+                	  <h1>구르미 덕후들을 위한
+					  배경화면 왔어요 </h1>
+					  한 컷 한 컷이 소중한 KBS 구르미
+
+					<p>* KBS2 '구르미 그린 달빛'</p>
+                </div>
+                <div class="side2">
+                  <div class="sideSon">
+                      <a href="#" ><span id="heartS" class="fa fa-heart"><em>395</em></span></a> 
+                      <a href="#" ><span id="heartS" class="fa fa-bookmark border"><em>7</em></span></a>
+                      <a href="#" ><span id="envelopeS" class="fa fa-envelope"></span></a> 
+                      <a href="https://ko-kr.facebook.com/" >
+                      <span id="facebooxS" class="fa fa-facebook"></span></a> 
+                      <a href="https://www.twitter.com/" >
+                      <span id="twitterS" class="fa fa-twitter"></span></a> 
+                      
+                  <div class="side3">
+                      
+                        
+                        <img id="imgId1"  src="images/jung1.png"/>
+                        <div>
+                        <p style="text-align: center;">요즘 세자 저하와 라온이의 조청 떨어지는
+						연애 덕분에 매주 월화가 행복하신
+						(나를 포함한) 핔플 많을 것이오.</p> </div>
+                         <img id="imgId2" src="images/jung2.png"/> 
+                         <div>
+                        <p style="text-align: center;">비록 이번 주는 짠내가 폴폴 났지만,
+						담주에는 사이다 열 잔 들이켜주길 바라며!
+						이번에는 골고루 가져왔지롱♡.</p> </div>
+						 <img id="imgId2" src="images/jung3.png"/> 
+                         <div>
+                        <p style="text-align: center;">'구르미 그린 달빛'은 조선 시대 후기 효명세자를 모티브로 한 청춘들의 성장 스토리를 다룰 예측불허 궁중위장 로맨스로, 네이버에 연재되어 큰 인기를 누린 동명의 웹툰을 원작으로 했다. 
+						역사에서 효명세자는 정조의 손자이자 순조의 맏아들로, 순조가 건강이 악화하자 18세에 대리청정을 시작했다. 그는 당시 국정의 중심인 세도정치 세력을 약화해 왕권을 회복하려고 노력했으나, 4년 만에 죽음에 이르면서 뜻을 이루지 못한 비운의 왕세자다. 
+						현재 방송 중인 KBS2 월화드라마 '뷰티플 마인드' 후속작으로 오는 8월 15일 첫 방송 된다.</p> 
+					</div>
+                          <div class="container10">
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <label id="repl" class="col-xs-2 col-sm-2">
+                          <img id="im" src="images/qwe.png"  alt="프로필사진이 보이는 곳">
+                        </label>
+                        <div class="col-xs-8 col-sm-8">
+                          <textarea class="form-control" type="text" id="text" maxlength="140" />
+                          </textarea>
+                          <p class="help-block">140자 이내로 입력하세요.</p>
+                        </div>
+                        <button id="enter" type="text" class="col-xs-2 col-sm-2 btn btn-info">등록</button>
+                      </div>
+                    </form>
+                  </div>
+                       <!--   <div class="imgMoon2" id="imgId">
+                          
+                          <a href="https://ko-kr.facebook.com/" >
+                          <span id="facebooxY" class="fa fa-facebook" style="color:#B1B1B1; display: inline;
+                          "></span></a> 
+                          <a href="https://www.twitter.com/" >
+                          <span id="twitterY" class="fa fa-twitter" 
+                          style="color:#B1B1B1; display: inline;"></span></a> 
+                          <a href="#" ><span id="envelopeY" class="fa fa-envelope" style="color:#B1B1B1; display: inline;"></span></a> 
+                          
+                        </div> -->
+                            
+                      </div>
+                     <div class="side4">
+                     	   
+                     </div>
+                     <div class="side5"></div>
+                     <div class="side6"></div>
+                  </div> 
+              </div>
+             <div>
+                <button id="topbtn">TOP</button>
+            </div>  
+           </div>
+            
+            
+              <div class="hidden-xs col-sm-4 col-md-4" id="col4">
+              <button class="close" data-dismiss="modal">&times;</button>
+                <div class="inarea"> 
+                          
+                <div id="inarea1">
+                     <img class="picimg" src="images/pic.png">
+                    
+                     <p class="peco" style="font-size: 20px font-color:#00BFFF;">페코쨔응</p>
+                     <p style="color: #D8D8D8; text-align: center;">세상의 모든 '흥미돋'을 싹싹 긁어</p>
+                     <div>
+                     <button class="inareaBtn">구독하기</button>
+                     </div>
+                </div>
+                <div id="inarea2">
+                  <div id="inarsaSm">
+                      <a href="#" ><span id="eyeY" class="glyphicon glyphicon-eye-open">
+                      <em>14.2만</em></span></a>
+                       <a href="#" ><span id="heartY" class="glyphicon glyphicon-heart">
+                      <em>1700</em></span></a>  
+                       <a href="#" ><span id="commentY" class="glyphicon glyphicon-comment">
+                      <em>500</em></span></a> 
+                        <a href="#" ><span id="windowY" class="glyphicon glyphicon-new-window">
+                      <em>8</em></span></a> 
+                      
+
+                      
+                      
+                    </div>
+                <div id="inarea3"></div>
+                   <div>
+                         </div>
+              </div>
+            </div>
+           </div>
+      </div>
+ </div>
+
+<!-- 마우스 이미지 이벤트 -->
+
+
+<!-- 강민 -->
+
+
+
+
+
+
+
+
+<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+<script src="js/jquery-2.0.2.js"></script>	
+<script src="js/jquery.stellar.min.js"></script>
+<script>
+	$.stellar();
+	// $('#top').stellar({verticalScrolling:ture});
+ 	
+
+</script>
+<script>
+
+		
+ 	// 정호석 스크롤 이벤트
+	var lastScrollTop = 0;
+
+	$(window).on("scroll",function(){
+		
+		var scrollTop = $(document).scrollTop();
+		// var st = $(this).scrollTop();
+		if(scrollTop!=0){
+			$(".top").removeClass("beLarge").addClass("beSmall");
+		} 
+		 if(scrollTop==0){
+			$(".top").removeClass("beSmall").addClass("beLarge");
+		}
+		if(scrollTop> lastScrollTop){
+			console.log("down for real");
+			$(".botTag").removeClass("beBack").addClass("beGone");
+			// $(".botTag").slideUp();
+		} else{
+			console.log(" up for sure");
+			$(".botTag").removeClass("beGone").addClass("beBack");
+			// $(".botTag").slideDown();
+		}
+
+		if(scrollTop>70){
+			$(".lB").css({
+				position: "fixed",
+				top: "370px"
+				
+			});
+
+			$(".lT").css({
+				position: "fixed",
+				top: "130px",
+				width: "218.5px"
+			});
+		} else{
+			$(".lB").css({
+				// position: "absolute"
+				position: "static"
+			});
+			$(".lT").css({
+				position: "static",
+				width: "218.5px"
+			});
+		}
+		lastScrollTop = scrollTop;
+	});
+	 
+	// 강민형 옆에 타워 
+	 var count=0;
+	$("#runBtn").click(function(){
+		 $("#vimg").toggleClass("rotate180");
+				 if(count%2==0){
+		         $(".libox").css("display","none")
+		     }else if(count%2==1){
+                 $(".libox").css("display","block");
+		  }
+		 count++; 
+	});
+
+
+
+
+	//정호석 그리드 무한생성
+	var friends=[];
+		friends.push({src:"images/idorll.jpg", name:"김구라", phone:"010"});
+		friends.push({src:"https://pbs.twimg.com/media/CuxQ7uCVUAAYcWC.jpg", name:"해골", phone:"011"});	
+		friends.push({src:"https://pbs.twimg.com/media/CmE_v14WYAAMz0A.jpg", name:"주뎅이", phone:"017"});
+		friends.push({src:"https://ncache.ilbe.com/files/attach/new/20160424/4255758/7838266972/7937588863/6572aff8bbc57338903577f5cd29b9e4.jpeg", name:"원숭이", phone:"018"});
+		friends.push({src:"http://img.newspim.com/news/2016/05/04/1605041321004270.jpg", name:"덩어리", phone:"016"});
+		friends.push({src:"http://static.entertainmentwise.com/photos/Image/rdj.jpg", name:"준발이", phone:"019"});
+		friends.push({src:"http://r.fod4.com/c=sq/s=w1000,pd1/o=80/http://p.fod4.com/p/channels/fzoud/profile/JFRGCIGYSZiC8vugtlHt_obama.jpg", name:"김구라", phone:"010"});
+		friends.push({src:"https://ae01.alicdn.com/kf/HTB1.GwHMpXXXXXWaXXXq6xXFXXXU/Free-Shipping-54pcs-set-President-of-the-Russian-Vladimir-Putin-Poker-Celebrity-Playing-Cards-Human-theme.jpg", name:"해골", phone:"011"});	
+		friends.push({src:"https://ncache.ilbe.com/files/attach/new/20150305/377678/4265959295/5420705799/47b061a6414a18514e29894e4cfd9893.jpg", name:"주뎅이", phone:"017"});
+		friends.push({src:"http://www.hanasia.com/_sys/_upload/image/201610/18/14767790444566.jpg", name:"원숭이", phone:"018"});
+		friends.push({src:"http://www.dogdrip.net/files/attach/dvs/15/10/06/56670291/768/715/082/95b7147560126f0ff73388c56b09b3fd.jpg", name:"덩어리", phone:"016"});
+		friends.push({src:"http://www.tdrip.com/files/attach/images/104710/151/155/013/301ee0a3a5fc2cb932217e76ea3f90f7.jpg", name:"준발이", phone:"019"});
+
+		//나중에 쓸수도 있음요
+
+		var count = 0;
+
+		// for(var i=0; i<count; i++){
+		// 	var tmp = friends[i];
+
+		// 	var $img = $("<img/>").attr("src", tmp.src);
+		// 	var $p1 = $("<p/>").addClass("name").text(tmp.name);
+		// 	var $p2 = $("<p/>").addClass("phone").text(tmp.phone);
+
+		// 	$("<div/>").addClass("box inner")
+		// 	.append($img).append($p1).append($p2)
+		// 	.appendTo(".inner")
+		// };
+
+
+		// 스크롤 이벤트가 일어날떄 호출되는 함수
+		$(window).on("scroll",function(){
+			if(isEndOfDocument()){
+				// if(count == friends.langth){
+				// 	return;
+				// }
+				// alert("바닥이네?");
+				count++;
+
+				for(var i=0; i<12; i++){
+
+
+
+
+				// var tmp = friends[count%6];
+				var tmp = friends[count%12];
+
+				var $img = $("<img/>").addClass("img-responsive").attr("src", tmp.src);
+				var $imgDiv = $("<div/>").addClass("img ").attr("src", tmp.src);
+				var $div = $("<div/>").addClass("text").text("우주소녀 성소의 죽여주는 춤사위");
+				// $("img").addClass("img-responsive");
+				$imgDiv.append($img);
+
+				$("<div/>").addClass("box inner col-xs-6 col-sm-4 col-lg-3 ")
+				.append($imgDiv).append($div)
+				.appendTo(".rB").hide().show();
+				count++;
+
+				} // 요건 for
+			}
+		});
+
+					// <div class="box inner col-xs-6 col-sm-4 col-lg-3">
+						// 	<div class="img"><img class="img-responsive"   src="images/idorll.jpg"/ ></div>
+						// 	<div class="text">우주소녀 성소의 죽여주는 춤사위</div>
+					// </div>
+
+
+		// 페이지의 가장 아래쪽까지 스크롤 했는지 여부를 boolean type으로 리턴해주는 함수
+		function isEndOfDocument(){
+			// scroll top 구해서 출력해 보기 
+			var scrollTop=$(window).scrollTop();
+			$("#one").text("scrollTop : "+scrollTop);
+			var windowHeight=$(window).height();
+			$("#two").text("windowHeight : "+windowHeight);
+			var documentHeight=$(document).height();
+			$("#three").text("documentHeight : "+documentHeight);
+			var isBottom = documentHeight <= scrollTop + windowHeight;
+			//문서의 가장 아래쪽으로 스크롤 되었는지 여부를 리턴해준다. 
+			return isBottom;
+		}		
+
+
+	//정호석 테마 체인저 버튼
+	$("#sky").on("click",function(){
+		console.log("sky");
+		$(".top").css({
+			"background-image": "url(images/하늘.jpg)"
+
+		});
+		$("#nav").css({
+			"background-color": "#003399"
+		});
+		$(".lT").css({
+			"background-image": "url(images/하늘.jpg)"
+		});
+		$(".lB").css({
+			"background-image": "url(images/하늘.jpg)"
+		});
+		$(".icon").css({
+			"background-color": "transparent"
+		});
+	});
+
+	$("#universe").on("click",function(){
+		console.log("universe");
+		$(".top").css({
+			"background-image": "url(images/우주.jpg)"
+		});
+		$("#nav").css({
+			"background-color": "black"
+		});
+		$(".lT").css({
+			"background-image": "url(images/우주.jpg)"
+			
+		});
+		$(".lB").css({
+			"background-image": "url(images/우주.jpg)"
+			
+		});
+		$(".icon").css({
+			"background-color": "#cecece"
+		});
+		// $(".lbcontainer").css({
+		// 	"color" : "white"
+		// });
+	});
+
+	// 
+
+	// .top{
+	// 		width: 100%;
+	// 		height: 100px;
+	// 		color: white;
+	// 		text-align: center;
+	// 		font-size: 50px;
+	// 		display: table;
+	// 		background-image: url(images/하늘.jpg);
+	// 		background-image: cover;
+			
+	// 		scroll-behavior: auto;
+			
+	//	}
+		
+    // 강민 마우스 이벤트//
+    
+   //   $(".side3").mouseover(function(){
+  
+   //     $(".imgMoon2").css("display","block")
+     
+   //  });    
+   //  $(".side3").mouseout(function(){
+      
+   //       $(".imgMoon2").css("display","none");
+   //   });
+   // // 
+
+    //       $(window).scroll(function(){
+    //       var scrollPosition =$(this).scrollTop();
+    //       if(scrollPosition > 1500){
+    //         $("#topbtn").fadeIn();
+    //       }else{
+    //         $("#topbtn").fadeOut();
+    //       }
+          
+    // });
+      $("#topbtn").click(function(){
+          $("#myModal").animate({
+            scrollTop:0 
+          },500)
+    });
+    // 강민 마우스 이벤트//
+
+
+    	//리사이즈 이벤트!!
+      $(window).resize(function(){
+    	var width =$(this).width();
+    	if(width<1200){
+    	$(".wrapper").removeClass("container");
+    		} else{
+    			$(".wrapper").addClass("container");
+    		}
+    	});
+	// 오른쪽 버튼
+	$("#XBtn").click(function(){
+		$(".contain").css("display","block")
+		$(".contain").animate({
+		"right":"0px"
+		},600);
+		});
+	$("#reBtn").on("click",function(){
+		$(".contain").animate({
+		"right":"-290px"
+		},600);
+	$(".contain").hide(1,function(){});
+		});
+	$(".contain").css("position","fixed");
+</script>
+</body>
+</html>
